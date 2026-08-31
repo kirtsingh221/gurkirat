@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+/* ========================================
+   Tailwind Dark Mode
+   ======================================== */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* ========================================
+   Color Palette
+   ======================================== */
+
+:root {
+  --cream: #FFFCE1;
+  --green: #124D1C;
+  --green-light: #1A6B27;
+  --green-dark: #0D3513;
+}
+
+
+/* ========================================
+   Base
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--green);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html.dark body {
+  background: #071B0A;
+  color: var(--cream);
+}
+
+
+/* ========================================
+   Navigation Links
+   ======================================== */
+
+.nav-link {
+  position: relative;
+
+  color: var(--green);
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 2px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: var(--green);
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--green-light);
+}
+
+.nav-link:hover::after {
+  width: 18px;
+}
+
+
+/* ========================================
+   Dark Navigation Links
+   ======================================== */
+
+html.dark .nav-link {
+  color: #DDEFD8;
+}
+
+html.dark .nav-link:hover {
+  color: var(--cream);
+}
+
+html.dark .nav-link::after {
+  background: var(--cream);
+}
+
+
+/* ========================================
+   Mobile Links
+   ======================================== */
+
+.mobile-link {
+  display: block;
+
+  border-radius: 10px;
+
+  padding: 12px 16px;
+
+  font-size: 14px;
+
+  color: var(--green);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-link:hover {
+  background: rgba(18, 77, 28, 0.08);
+  color: var(--green-light);
+}
+
+
+/* ========================================
+   Dark Mobile Links
+   ======================================== */
+
+html.dark .mobile-link {
+  color: #DDEFD8;
+}
+
+html.dark .mobile-link:hover {
+  background: rgba(255, 252, 225, 0.08);
+  color: var(--cream);
+}
+
+
+/* ========================================
+   Navbar Scroll Effect
+   ======================================== */
+
+#navbar.scrolled {
+  box-shadow:
+    0 10px 30px rgba(18, 77, 28, 0.12);
+}
+
+html.dark #navbar.scrolled {
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* About Tech Stack */
+
+.about-tech {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 77, 28, 0.12);
+  background: rgba(18, 77, 28, 0.05);
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #124D1C;
+  transition: all 0.3s ease;
+}
+
+.about-tech:hover {
+  background: rgba(18, 77, 28, 0.1);
+  border-color: rgba(18, 77, 28, 0.25);
+  transform: translateY(-2px);
+}
+
+html.dark .about-tech {
+  border-color: rgba(255, 252, 225, 0.1);
+  background: rgba(255, 252, 225, 0.05);
+  color: #FFFCE1;
+}
+
+html.dark .about-tech:hover {
+  background: rgba(255, 252, 225, 0.1);
+  border-color: rgba(255, 252, 225, 0.2);
+}
+
+/* ================= SKILL TAGS ================= */
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 77, 28, 0.12);
+  background: rgba(18, 77, 28, 0.045);
+  padding: 8px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #124D1C;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(18, 77, 28, 0.3);
+  background: rgba(18, 77, 28, 0.1);
+  box-shadow: 0 8px 20px rgba(18, 77, 28, 0.08);
+}
+
+html.dark .skill-tag {
+  border-color: rgba(255, 252, 225, 0.1);
+  background: rgba(255, 252, 225, 0.04);
+  color: #FFFCE1;
+}
+
+html.dark .skill-tag:hover {
+  border-color: rgba(255, 252, 225, 0.25);
+  background: rgba(255, 252, 225, 0.08);
+}
+
+
+/* Small Tags */
+
+.skill-mini-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 77, 28, 0.1);
+  padding: 6px 11px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(18, 77, 28, 0.7);
+}
+
+html.dark .skill-mini-tag {
+  border-color: rgba(255, 252, 225, 0.1);
+  color: rgba(255, 252, 225, 0.7);
+}
