@@ -1,38 +1,46 @@
-// ================= THEME TOGGLE =================
+// ================= THEME =================
 
 const themeToggle = document.getElementById("themeToggle");
 const moonIcon = document.getElementById("moonIcon");
 const sunIcon = document.getElementById("sunIcon");
 
-function updateThemeIcon() {
-  const isDark = document.documentElement.classList.contains("dark");
+function applyTheme(theme) {
+  const html = document.documentElement;
 
-  moonIcon?.classList.toggle("hidden", !isDark);
-  sunIcon?.classList.toggle("hidden", isDark);
-}
-
-function setTheme(theme) {
   if (theme === "dark") {
-    document.documentElement.classList.add("dark");
+    html.classList.add("dark");
   } else {
-    document.documentElement.classList.remove("dark");
+    html.classList.remove("dark");
   }
 
-  localStorage.setItem("theme", theme);
-  updateThemeIcon();
+  // Icons
+  if (theme === "dark") {
+    moonIcon?.classList.remove("hidden");
+    sunIcon?.classList.add("hidden");
+  } else {
+    moonIcon?.classList.add("hidden");
+    sunIcon?.classList.remove("hidden");
+  }
 }
 
-// Saved theme
+// IMPORTANT:
+// First visit = LIGHT
 const savedTheme = localStorage.getItem("theme");
 
-// Default = LIGHT
-setTheme(savedTheme || "light");
+if (savedTheme === "dark" || savedTheme === "light") {
+  applyTheme(savedTheme);
+} else {
+  applyTheme("light");
+}
 
 // Toggle
 themeToggle?.addEventListener("click", () => {
   const isDark = document.documentElement.classList.contains("dark");
 
-  setTheme(isDark ? "light" : "dark");
+  const newTheme = isDark ? "light" : "dark";
+
+  applyTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
 });
 
 // ================= MOBILE MENU =================
