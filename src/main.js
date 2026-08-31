@@ -1,4 +1,4 @@
-// ================= THEME =================
+// ================= THEME TOGGLE =================
 
 const themeToggle = document.getElementById("themeToggle");
 const moonIcon = document.getElementById("moonIcon");
@@ -7,43 +7,33 @@ const sunIcon = document.getElementById("sunIcon");
 function updateThemeIcon() {
   const isDark = document.documentElement.classList.contains("dark");
 
-  if (isDark) {
-    moonIcon.classList.remove("hidden");
-    sunIcon.classList.add("hidden");
-  } else {
-    moonIcon.classList.add("hidden");
-    sunIcon.classList.remove("hidden");
-  }
+  moonIcon?.classList.toggle("hidden", !isDark);
+  sunIcon?.classList.toggle("hidden", isDark);
 }
 
+function setTheme(theme) {
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
 
-// Load saved theme
+  localStorage.setItem("theme", theme);
+  updateThemeIcon();
+}
+
+// Saved theme
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "light") {
-  document.documentElement.classList.remove("dark");
-} else {
-  document.documentElement.classList.add("dark");
-}
+// Default = LIGHT
+setTheme(savedTheme || "light");
 
-updateThemeIcon();
-
-
-// Toggle theme
-themeToggle.addEventListener("click", () => {
+// Toggle
+themeToggle?.addEventListener("click", () => {
   const isDark = document.documentElement.classList.contains("dark");
 
-  if (isDark) {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  } else {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
-
-  updateThemeIcon();
+  setTheme(isDark ? "light" : "dark");
 });
-
 
 // ================= MOBILE MENU =================
 
