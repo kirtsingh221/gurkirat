@@ -110,3 +110,57 @@ window.addEventListener(
 
 
 updateCurrentSection();
+
+
+  const navLinks = document.querySelectorAll(".side-nav-link");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+
+          navLinks.forEach((link) => {
+            link.classList.remove(
+              "bg-[#124D1C]",
+              "text-[#FFFCE1]",
+              "shadow-lg",
+              "shadow-[#124D1C]/20"
+            );
+
+            link.classList.add(
+              "text-[#124D1C]/60"
+            );
+
+            if (document.documentElement.classList.contains("dark")) {
+              link.classList.remove("text-[#124D1C]/60");
+              link.classList.add("text-[#FFFCE1]/55");
+            }
+          });
+
+          const activeLink = document.querySelector(
+            `.side-nav-link[data-section="${id}"]`
+          );
+
+          if (activeLink) {
+            activeLink.classList.remove(
+              "text-[#124D1C]/60",
+              "text-[#FFFCE1]/55"
+            );
+
+            activeLink.classList.add(
+              "bg-[#124D1C]",
+              "text-[#FFFCE1]",
+              "shadow-lg",
+              "shadow-[#124D1C]/20"
+            );
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
