@@ -1,18 +1,27 @@
 {
-    "name": "frontend-developer-resume",
-    "private": true,
-    "version": "1.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "@tailwindcss/vite": "^4.1.12",
-        "tailwindcss": "^4.1.12"
-    },
-    "devDependencies": {
-        "vite": "6.4.3"
-    }
+  "name": "frontend-developer-resume",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "vite": "6.4.3"
+  },
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
