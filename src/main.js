@@ -23,8 +23,10 @@ function applyTheme(theme) {
   }
 }
 
+
 // IMPORTANT:
 // First visit = LIGHT
+
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark" || savedTheme === "light") {
@@ -33,30 +35,38 @@ if (savedTheme === "dark" || savedTheme === "light") {
   applyTheme("light");
 }
 
-// Toggle
+
+// Toggle Theme
+
 themeToggle?.addEventListener("click", () => {
   const isDark = document.documentElement.classList.contains("dark");
 
   const newTheme = isDark ? "light" : "dark";
 
   applyTheme(newTheme);
+
   localStorage.setItem("theme", newTheme);
+
+  // Update side nav immediately
+  updateSideNav();
 });
+
 
 // ================= MOBILE MENU =================
 
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+menuBtn?.addEventListener("click", () => {
+  mobileMenu?.classList.toggle("hidden");
 });
 
 
 // Close mobile menu after clicking link
+
 document.querySelectorAll(".mobile-link").forEach((link) => {
   link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
+    mobileMenu?.classList.add("hidden");
   });
 });
 
@@ -64,11 +74,16 @@ document.querySelectorAll(".mobile-link").forEach((link) => {
 // ================= NAVBAR SCROLL =================
 
 const navbar = document.getElementById("navbar");
-
 const currentSection = document.getElementById("currentSection");
+
+
+// IMPORTANT:
+// Sections declared ONLY ONCE
 
 const sections = document.querySelectorAll("section[id]");
 
+
+// Section Names
 
 const sectionNames = {
   home: "Home",
@@ -80,87 +95,124 @@ const sectionNames = {
 };
 
 
-function updateCurrentSection() {
+// ================= GET ACTIVE SECTION =================
 
-  const scrollPosition = window.scrollY + 180;
+function getActiveSection() {
+  // 250px offset works better for mobile + desktop
+
+  const scrollPosition = window.scrollY + 250;
 
   let activeSection = "home";
 
   sections.forEach((section) => {
-
     if (scrollPosition >= section.offsetTop) {
       activeSection = section.id;
     }
-
   });
 
-
-  const name = sectionNames[activeSection] || "Home";
-
-  currentSection.textContent = name;
-
-  currentSection.href = `#${activeSection}`;
+  return activeSection;
 }
 
 
+// ================= CURRENT SECTION =================
+
+function updateCurrentSection() {
+  const activeSection = getActiveSection();
+
+  const name = sectionNames[activeSection] || "Home";
+
+  if (currentSection) {
+    currentSection.textContent = name;
+    currentSection.href = `#${activeSection}`;
+  }
+}
+
+
+// ================= SIDE NAV ACTIVE =================
+
+const navLinks = document.querySelectorAll(".side-nav-link");
+
+
+function updateSideNav() {
+  const activeId = getActiveSection();
+
+  const isDark =
+    document.documentElement.classList.contains("dark");
+
+
+  navLinks.forEach((link) => {
+    const isActive =
+      link.dataset.section === activeId;
+
+
+    // Remove previous states
+
+    link.classList.remove(
+      "bg-[#124D1C]",
+      "text-[#FFFCE1]",
+      "text-[#124D1C]/60",
+      "text-[#FFFCE1]/55",
+      "shadow-lg",
+      "shadow-[#124D1C]/20"
+    );
+
+
+    // ================= ACTIVE =================
+
+    if (isActive) {
+      link.classList.add(
+        "bg-[#124D1C]",
+        "text-[#FFFCE1]",
+        "shadow-lg",
+        "shadow-[#124D1C]/20"
+      );
+    }
+
+
+    // ================= INACTIVE =================
+
+    else {
+      if (isDark) {
+        link.classList.add(
+          "text-[#FFFCE1]/55"
+        );
+      } else {
+        link.classList.add(
+          "text-[#124D1C]/60"
+        );
+      }
+    }
+  });
+}
+
+
+// ================= UPDATE EVERYTHING =================
+
+function updateNavigation() {
+  updateCurrentSection();
+  updateSideNav();
+}
+
+
+// ================= SCROLL =================
+
 window.addEventListener(
   "scroll",
-  updateCurrentSection
+  updateNavigation,
+  { passive: true }
 );
 
 
-updateCurrentSection();
+// ================= RESIZE =================
+
+// Important for mobile orientation / browser resize
+
+window.addEventListener(
+  "resize",
+  updateNavigation
+);
 
 
-  const navLinks = document.querySelectorAll(".side-nav-link");
+// ================= INITIAL LOAD =================
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-
-          navLinks.forEach((link) => {
-            link.classList.remove(
-              "bg-[#124D1C]",
-              "text-[#FFFCE1]",
-              "shadow-lg",
-              "shadow-[#124D1C]/20"
-            );
-
-            link.classList.add(
-              "text-[#124D1C]/60"
-            );
-
-            if (document.documentElement.classList.contains("dark")) {
-              link.classList.remove("text-[#124D1C]/60");
-              link.classList.add("text-[#FFFCE1]/55");
-            }
-          });
-
-          const activeLink = document.querySelector(
-            `.side-nav-link[data-section="${id}"]`
-          );
-
-          if (activeLink) {
-            activeLink.classList.remove(
-              "text-[#124D1C]/60",
-              "text-[#FFFCE1]/55"
-            );
-
-            activeLink.classList.add(
-              "bg-[#124D1C]",
-              "text-[#FFFCE1]",
-              "shadow-lg",
-              "shadow-[#124D1C]/20"
-            );
-          }
-        }
-      });
-    },
-    {
-      threshold: 0.35
-    }
-  );
-
-  sections.forEach((section) => observer.observe(section));
+updateNavigation();

@@ -27,7 +27,7 @@
          sm:w-fit">
     <div class="mx-auto max-w-7xl
                     overflow-hidden
-                    rounded-2xl
+                    rounded-full
                     border border-[#124D1C]/15
                     bg-[#FFFCE1]/70
                     shadow-[0_8px_30px_rgba(18,77,28,0.08)]
@@ -60,7 +60,7 @@
               <img src="./images/sass.png" alt="Gurkirat Singh" class="h-full w-full object-cover" />
             </div>
 
-            <div class="hidden sm:block">
+            <div class="block">
               <h1 class="text-sm font-bold tracking-wide
                      text-[#124D1C]
                      dark:text-[#FFFCE1]">
@@ -160,73 +160,42 @@
               CV
 
             </a>
-
-            <!-- ================= MOBILE MENU BUTTON ================= -->
-            <button id="menuBtn" aria-label="Open menu" class="flex h-9 w-9 shrink-0 items-center justify-center
-                   rounded-full
-                   border border-[#124D1C]/15
-                   bg-[#124D1C]/5
-                   text-[#124D1C]
-                   backdrop-blur-md
-                   transition-all duration-300
-                   hover:scale-105
-                   hover:bg-[#124D1C]/10
-                   sm:h-10 sm:w-10
-                   sm:rounded-xl
-                   md:hidden
-                   dark:border-[#FFFCE1]/10
-                   dark:bg-[#FFFCE1]/5
-                   dark:text-[#FFFCE1]
-                   dark:hover:bg-[#FFFCE1]/10">
-
-              <svg id="menuIcon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <!-- ================= MOBILE MENU ================= -->
-        <div id="mobileMenu" class="hidden
-               border-t
-               border-[#124D1C]/10
-               pb-3 pt-3
-               dark:border-[#FFFCE1]/10">
-
-          <div class="flex flex-col gap-1">
-
-            <a href="#home" class="mobile-link">
-              Home
-            </a>
-
-            <a href="#about" class="mobile-link">
-              About
-            </a>
-
-            <a href="#skills" class="mobile-link">
-              Skills
-            </a>
-
-            <a href="#experience" class="mobile-link">
-              Experience
-            </a>
-
-            <a href="#projects" class="mobile-link">
-              Projects
-            </a>
-
-            <a href="#contact" class="mobile-link">
-              Contact
-            </a>
+     <!-- MOBILE CALL BUTTON -->
+            <div class="flex justify-center py-5 sm:hidden">
+              <a href="tel:+91XXXXXXXXXX" aria-label="Call Gurkirat Singh" class="flex h-10 w-10 items-center justify-center
+           rounded-full
+           border border-[#FFFCE1]/20
+           bg-[#124D1C]
+           text-[#FFFCE1]
+           shadow-[0_12px_35px_rgba(18,77,28,0.30)]
+           backdrop-blur-xl
+           transition-all duration-300
+           active:scale-95
+           hover:scale-105
+           hover:bg-[#1A6B27]
+           hover:shadow-[0_18px_45px_rgba(18,77,28,0.40)]
+           dark:border-[#FFFCE1]/15">
+                <svg class="h-5 w-5 transition-transform duration-300
+             group-hover:rotate-[-12deg] group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M22 16.92v3a2 2 0 0 1-2.18 2
+           19.79 19.79 0 0 1-8.63-3.07
+           19.5 19.5 0 0 1-6-6
+           19.79 19.79 0 0 1-3.07-8.67
+           A2 2 0 0 1 4.11 2h3
+           a2 2 0 0 1 2 1.72
+           12.84 12.84 0 0 1 .7 2.81
+           2 2 0 0 1-.45 2.11L8.09 9.91
+           a16 16 0 0 0 6 6l1.27-1.27
+           a2 2 0 0 1 2.11-.45
+           12.84 12.84 0 0 0 2.81.7
+           A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </a>
+            </div>
 
           </div>
 
         </div>
-
       </div>
     </div>
   </nav>
@@ -3240,10 +3209,8 @@ dark:shadow-none">
 
   </nav>
 
-  <!-- FIXED CALL BUTTON -->
-  <a href="tel:+91XXXXXXXXXX" aria-label="Call Gurkirat Singh" 
-  class="group fixed bottom-2 right-2 z-[60]
-         flex items-center gap-2
+  <a href="tel:+91XXXXXXXXXX" aria-label="Call Gurkirat Singh" class="group fixed bottom-8 right-8 z-[60]
+         hidden items-center gap-2
          rounded-full
          border border-[#FFFCE1]/20
          bg-[#124D1C]
@@ -3258,43 +3225,43 @@ dark:shadow-none">
          hover:bg-[#1A6B27]
          hover:shadow-[0_18px_45px_rgba(18,77,28,0.40)]
          dark:border-[#FFFCE1]/15
-         sm:bottom-8
-         sm:right-8"
-         >
+         sm:flex">
 
     <!-- Phone Icon -->
     <svg class="h-5 w-5 transition-transform duration-300
-           group-hover:rotate-[-12deg] group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        group-hover:rotate-[-12deg] group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M22 16.92v3a2 2 0 0 1-2.18 2
-         19.79 19.79 0 0 1-8.63-3.07
-         19.5 19.5 0 0 1-6-6
-         19.79 19.79 0 0 1-3.07-8.67
-         A2 2 0 0 1 4.11 2h3
-         a2 2 0 0 1 2 1.72
-         12.84 12.84 0 0 0 .7 2.81
-         2 2 0 0 1-.45 2.11L8.09 9.91
-         a16 16 0 0 0 6 6l1.27-1.27
-         a2 2 0 0 1 2.11-.45
-         12.84 12.84 0 0 0 2.81.7
-         A2 2 0 0 1 22 16.92z" />
+            19.79 19.79 0 0 1-8.63-3.07
+            19.5 19.5 0 0 1-6-6
+            19.79 19.79 0 0 1-3.07-8.67
+            A2 2 0 0 1 4.11 2h3
+            a2 2 0 0 1 2 1.72
+            12.84 12.84 0 0 1 .7 2.81
+            2 2 0 0 1-.45 2.11L8.09 9.91
+            a16 16 0 0 0 6 6l1.27-1.27
+            a2 2 0 0 1 2.11-.45
+            12.84 12.84 0 0 0 2.81.7
+            A2 2 0 0 1 22 16.92z" />
     </svg>
 
-    <span class="hidden sm:inline">
+    <span>
       Let's Talk
     </span>
 
     <!-- Pulse Dot -->
     <span class="relative flex h-2.5 w-2.5">
       <span class="absolute inline-flex h-full w-full
-             animate-ping rounded-full
-             bg-[#FFFCE1] opacity-60">
+          animate-ping rounded-full
+          bg-[#FFFCE1] opacity-60">
       </span>
+
       <span class="relative inline-flex h-2.5 w-2.5
-             rounded-full bg-[#FFFCE1]">
+          rounded-full bg-[#FFFCE1]">
       </span>
     </span>
 
   </a>
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
@@ -3302,7 +3269,7 @@ dark:shadow-none">
   <script>
     var swiper = new Swiper('.mySwiper', {
       spaceBetween: 10,
-      slidesPerView: 4,
+      slidesPerView: 2,
       freeMode: true,
       watchSlidesProgress: true,
     });
