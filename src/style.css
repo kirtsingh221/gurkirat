@@ -546,9 +546,9 @@ html.dark .skill-mini-tag {
   @media (max-width: 640px) {
 
     .skill-tab {
-      padding: 8px 12px;
-      font-size: 12px;
-    }
+      padding: 12px 16px;
+      font-size: 14px;
+  }
 
     .skill-card {
       padding: 20px;
@@ -565,6 +565,11 @@ html.dark .skill-mini-tag {
     .skill-icon {
       height: 40px;
       width: 40px;
+    }
+    #skillTabs{
+      overflow-x: scroll;
+      flex-wrap: nowrap !important;
+      justify-content: start !important;
     }
 
   }
