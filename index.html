@@ -409,7 +409,7 @@
               Follow
             </span>
 
-            <a href="#" aria-label="GitHub" class="flex h-9 w-9 items-center
+            <a href="https://github.com/kirtsingh221" aria-label="GitHub" class="flex h-9 w-9 items-center
                      justify-center rounded-lg
                      border border-[#124D1C]/10
                      text-[#124D1C]/60
@@ -424,7 +424,7 @@
               GH
             </a>
 
-            <a href="#" aria-label="LinkedIn" class="flex h-9 w-9 items-center
+            <a href="https://www.linkedin.com/in/gurkirat-singh-a863971b5/" aria-label="LinkedIn" class="flex h-9 w-9 items-center
                      justify-center rounded-lg
                      border border-[#124D1C]/10
                      text-xs font-bold
@@ -1433,108 +1433,122 @@
 
   </section>
   <!-- ================= SKILLS SECTION ================= -->
-  <section id="skills" class="relative overflow-hidden bg-[#FFFCE1] py-10 dark:bg-[#071B0A]">
-
+  <section id="skills" class="relative overflow-hidden bg-[#FFFCE1] py-20 dark:bg-[#071B0A]">
     <!-- Background Glow -->
-    <div class="pointer-events-none absolute -left-40 top-20 h-80 w-80
-              rounded-full bg-[#124D1C]/10 blur-3xl
-              dark:bg-[#FFFCE1]/5"></div>
+    <div class="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full
+           bg-[#124D1C]/10 blur-3xl dark:bg-[#FFFCE1]/5"></div>
 
-    <div class="pointer-events-none absolute -right-40 bottom-10 h-96 w-96
-              rounded-full bg-[#124D1C]/10 blur-3xl
-              dark:bg-[#FFFCE1]/5"></div>
+    <div class="pointer-events-none absolute -right-40 bottom-10 h-96 w-96 rounded-full
+           bg-[#124D1C]/10 blur-3xl dark:bg-[#FFFCE1]/5"></div>
 
-    <!-- Container -->
+    <!-- Animated Grid -->
+    <div class="pointer-events-none absolute inset-0 opacity-[0.025]
+           dark:opacity-[0.035]" style="
+      background-image:
+        linear-gradient(#124D1C 1px, transparent 1px),
+        linear-gradient(90deg, #124D1C 1px, transparent 1px);
+      background-size: 45px 45px;
+    "></div>
+
     <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
-      <!-- Section Heading -->
+      <!-- ================= HEADING ================= -->
       <div class="mx-auto max-w-2xl text-center">
 
         <span class="inline-flex items-center gap-2 rounded-full
-                   border border-[#124D1C]/15
-                   bg-[#124D1C]/5
-                   px-4 py-2 text-xs font-semibold
-                   uppercase tracking-[0.2em]
-                   text-[#124D1C]
-                   dark:border-[#FFFCE1]/10
-                   dark:bg-[#FFFCE1]/5
-                   dark:text-[#FFFCE1]">
-
-          <span class="h-1.5 w-1.5 rounded-full
-                     bg-[#124D1C]
-                     dark:bg-[#FFFCE1]"></span>
+               border border-[#124D1C]/15
+               bg-[#124D1C]/5
+               px-4 py-2 text-xs font-semibold uppercase
+               tracking-[0.2em] text-[#124D1C]
+               dark:border-[#FFFCE1]/10
+               dark:bg-[#FFFCE1]/5
+               dark:text-[#FFFCE1]">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full
+                 bg-[#124D1C] dark:bg-[#FFFCE1]"></span>
 
           My Skills
         </span>
 
         <h2 class="mt-5 text-4xl font-bold tracking-tight
-                 text-[#124D1C]
-                 sm:text-5xl
-                 dark:text-[#FFFCE1]">
+               text-[#124D1C] sm:text-5xl
+               dark:text-[#FFFCE1]">
           Technologies I
-          <span class="text-[#124D1C]/50 dark:text-[#FFFCE1]/50">
+          <span class="text-[#124D1C]/40 dark:text-[#FFFCE1]/40">
             work with.
           </span>
         </h2>
 
         <p class="mt-5 text-base leading-7
-                text-[#124D1C]/60
-                sm:text-lg
-                dark:text-[#DDEFD8]/65">
+               text-[#124D1C]/60 sm:text-lg
+               dark:text-[#DDEFD8]/65">
           A modern toolkit I use to build responsive, scalable and
           high-performance web applications.
         </p>
-
       </div>
 
 
-      <!-- ================= SKILL CATEGORIES ================= -->
-      <div class="mt-14 grid gap-6 lg:grid-cols-2">
+      <!-- ================= TABS ================= -->
+      <div class="mt-12 flex justify-center">
+
+        <div class="inline-flex max-w-full flex-wrap justify-center gap-2
+               rounded-full border border-[#124D1C]/10
+               bg-white/50 p-2 backdrop-blur-xl
+               dark:border-[#FFFCE1]/10
+               dark:bg-[#0D3513]/50" id="skillTabs">
+
+          <button type="button" data-filter="all" class="skill-tab active">
+            All
+          </button>
+
+          <button type="button" data-filter="frontend" class="skill-tab">
+            Frontend
+          </button>
+
+          <button type="button" data-filter="backend" class="skill-tab">
+            Backend
+          </button>
+
+          <button type="button" data-filter="design" class="skill-tab">
+            Design
+          </button>
+
+          <button type="button" data-filter="cms" class="skill-tab">
+            CMS
+          </button>
+
+          <button type="button" data-filter="ai" class="skill-tab">
+            AI
+          </button>
+
+        </div>
+      </div>
 
 
-        <!-- Frontend -->
-        <div class="group rounded-3xl
-                  border border-[#124D1C]/10
-                  bg-white/40
-                  p-6
-                  shadow-[0_15px_50px_rgba(18,77,28,0.06)]
-                  backdrop-blur-xl
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:border-[#124D1C]/20
-                  hover:shadow-[0_20px_60px_rgba(18,77,28,0.10)]
-                  dark:border-[#FFFCE1]/10
-                  dark:bg-[#0D3513]/50
-                  dark:shadow-none">
+      <!-- ================= SKILLS GRID ================= -->
+      <div id="skillsGrid" class="mt-10 grid gap-6 md:grid-cols-2">
+
+        <!-- ================= FRONTEND ================= -->
+        <div class="skill-card" data-category="frontend">
 
           <div class="mb-6 flex items-center justify-between">
 
             <div>
-              <p class="text-xs uppercase tracking-[0.2em]
-                      text-[#124D1C]/45
-                      dark:text-[#DDEFD8]/45">
-                01
-              </p>
+              <p class="skill-number">01</p>
 
-              <h3 class="mt-1 text-xl font-bold
-                       text-[#124D1C]
-                       dark:text-[#FFFCE1]">
+              <h3 class="skill-title">
                 Frontend Development
               </h3>
+
+              <p class="skill-description">
+                Building modern, responsive and interactive web interfaces.
+              </p>
             </div>
 
-            <div class="flex h-11 w-11 items-center justify-center
-                      rounded-xl
-                      bg-[#124D1C]/5
-                      text-lg
-                      text-[#124D1C]
-                      dark:bg-[#FFFCE1]/5
-                      dark:text-[#FFFCE1]">
+            <div class="skill-icon">
               &lt;/&gt;
             </div>
 
           </div>
-
 
           <div class="flex flex-wrap gap-3">
 
@@ -1555,101 +1569,111 @@
         </div>
 
 
-        <!-- State Management -->
-        <div class="group rounded-3xl
-                  border border-[#124D1C]/10
-                  bg-white/40
-                  p-6
-                  shadow-[0_15px_50px_rgba(18,77,28,0.06)]
-                  backdrop-blur-xl
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:border-[#124D1C]/20
-                  dark:border-[#FFFCE1]/10
-                  dark:bg-[#0D3513]/50
-                  dark:shadow-none">
+        <!-- ================= BACKEND ================= -->
+        <div class="skill-card" data-category="backend">
 
           <div class="mb-6 flex items-center justify-between">
 
             <div>
-              <p class="text-xs uppercase tracking-[0.2em]
-                      text-[#124D1C]/45
-                      dark:text-[#DDEFD8]/45">
-                02
-              </p>
+              <p class="skill-number">02</p>
 
-              <h3 class="mt-1 text-xl font-bold
-                       text-[#124D1C]
-                       dark:text-[#FFFCE1]">
-                State & API
+              <h3 class="skill-title">
+                Backend & Database
               </h3>
+
+              <p class="skill-description">
+                Basic knowledge of backend development, APIs and databases.
+              </p>
             </div>
 
-            <div class="flex h-11 w-11 items-center justify-center
-                      rounded-xl
-                      bg-[#124D1C]/5
-                      text-lg
-                      text-[#124D1C]
-                      dark:bg-[#FFFCE1]/5
-                      dark:text-[#FFFCE1]">
-              ⚡
+            <div class="skill-icon">
+              DB
             </div>
 
           </div>
 
           <div class="flex flex-wrap gap-3">
 
-            <span class="skill-tag">Redux</span>
-            <span class="skill-tag">Zustand</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
             <span class="skill-tag">REST API</span>
-            <span class="skill-tag">API Integration</span>
-            <span class="skill-tag">ChatGPT API</span>
-            <span class="skill-tag">Gemini API</span>
-            <span class="skill-tag">Claude API</span>
-            <span class="skill-tag">Lovable AI</span>
+
+          </div>
+
+          <!-- Basic Knowledge Badge -->
+          <div class="mt-6 inline-flex items-center gap-2 rounded-full
+                 border border-[#124D1C]/10
+                 bg-[#124D1C]/5
+                 px-3 py-1.5 text-xs font-semibold
+                 text-[#124D1C]
+                 dark:border-[#FFFCE1]/10
+                 dark:bg-[#FFFCE1]/5
+                 dark:text-[#FFFCE1]">
+            <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+            Basic Knowledge
+          </div>
+
+        </div>
+
+
+        <!-- ================= DESIGN ================= -->
+        <div class="skill-card" data-category="design">
+
+          <div class="mb-6 flex items-center justify-between">
+
+            <div>
+              <p class="skill-number">03</p>
+
+              <h3 class="skill-title">
+                Design & Creative
+              </h3>
+
+              <p class="skill-description">
+                Designing clean, user-friendly and visually engaging interfaces.
+              </p>
+            </div>
+
+            <div class="skill-icon">
+              ✦
+            </div>
+
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Adobe Photoshop</span>
+            <span class="skill-tag">Adobe XD</span>
+            <span class="skill-tag">UI Design</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Prototyping</span>
 
           </div>
 
         </div>
 
 
-        <!-- CMS & Website Builders -->
-        <div class="group rounded-3xl
-                  border border-[#124D1C]/10
-                  bg-white/40
-                  p-6
-                  shadow-[0_15px_50px_rgba(18,77,28,0.06)]
-                  backdrop-blur-xl
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:border-[#124D1C]/20
-                  dark:border-[#FFFCE1]/10
-                  dark:bg-[#0D3513]/50
-                  dark:shadow-none">
+        <!-- ================= CMS ================= -->
+        <div class="skill-card" data-category="cms">
 
           <div class="mb-6 flex items-center justify-between">
 
             <div>
-              <p class="text-xs uppercase tracking-[0.2em]
-                      text-[#124D1C]/45
-                      dark:text-[#DDEFD8]/45">
-                03
-              </p>
+              <p class="skill-number">04</p>
 
-              <h3 class="mt-1 text-xl font-bold
-                       text-[#124D1C]
-                       dark:text-[#FFFCE1]">
+              <h3 class="skill-title">
                 CMS & Platforms
               </h3>
+
+              <p class="skill-description">
+                Creating and customizing websites using popular CMS platforms.
+              </p>
             </div>
 
-            <div class="flex h-11 w-11 items-center justify-center
-                      rounded-xl
-                      bg-[#124D1C]/5
-                      text-lg
-                      text-[#124D1C]
-                      dark:bg-[#FFFCE1]/5
-                      dark:text-[#FFFCE1]">
+            <div class="skill-icon">
               ◈
             </div>
 
@@ -1666,147 +1690,87 @@
         </div>
 
 
-        <!-- Backend -->
-        <div class="group rounded-3xl
-                  border border-[#124D1C]/10
-                  bg-white/40
-                  p-6
-                  shadow-[0_15px_50px_rgba(18,77,28,0.06)]
-                  backdrop-blur-xl
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:border-[#124D1C]/20
-                  dark:border-[#FFFCE1]/10
-                  dark:bg-[#0D3513]/50
-                  dark:shadow-none">
+        <!-- ================= AI ================= -->
+        <div class="skill-card md:col-span-2" data-category="ai">
 
           <div class="mb-6 flex items-center justify-between">
 
             <div>
-              <p class="text-xs uppercase tracking-[0.2em]
-                      text-[#124D1C]/45
-                      dark:text-[#DDEFD8]/45">
-                04
-              </p>
+              <p class="skill-number">05</p>
 
-              <h3 class="mt-1 text-xl font-bold
-                       text-[#124D1C]
-                       dark:text-[#FFFCE1]">
-                Backend & Database
+              <h3 class="skill-title">
+                AI & AI Integration
               </h3>
+
+              <p class="skill-description">
+                Integrating modern AI tools and APIs into web applications.
+              </p>
             </div>
 
-            <div class="flex h-11 w-11 items-center justify-center
-                      rounded-xl
-                      bg-[#124D1C]/5
-                      text-lg
-                      text-[#124D1C]
-                      dark:bg-[#FFFCE1]/5
-                      dark:text-[#FFFCE1]">
-              DB
+            <div class="skill-icon">
+              AI
             </div>
 
           </div>
 
           <div class="flex flex-wrap gap-3">
 
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">PHP</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">ChatGPT API</span>
+            <span class="skill-tag">OpenAI</span>
+            <span class="skill-tag">Gemini API</span>
+            <span class="skill-tag">Claude API</span>
+            <span class="skill-tag">Lovable AI</span>
+            <span class="skill-tag">AI Integration</span>
+            <span class="skill-tag">AI Tools</span>
 
           </div>
 
         </div>
 
-        <!-- ================= DESIGN & CREATIVE ================= -->
-        <div class="group rounded-3xl
-border border-[#124D1C]/10
-bg-white/40
-p-6
-shadow-[0_15px_50px_rgba(18,77,28,0.06)]
-backdrop-blur-xl
-transition-all duration-300
-hover:-translate-y-1
-hover:border-[#124D1C]/20
-hover:shadow-[0_20px_60px_rgba(18,77,28,0.10)]
-dark:border-[#FFFCE1]/10
-dark:bg-[#0D3513]/50
-dark:shadow-none">
-
-          <div class="mb-6 flex items-center justify-between">
-
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em]
-    text-[#124D1C]/45
-    dark:text-[#DDEFD8]/45">
-                05
-              </p>
-
-              <h3 class="mt-1 text-xl font-bold
-     text-[#124D1C]
-     dark:text-[#FFFCE1]">
-                Design & Creative
-              </h3>
-            </div>
-
-            <div class="flex h-11 w-11 items-center justify-center
-    rounded-xl
-    bg-[#124D1C]/5
-    text-lg font-bold
-    text-[#124D1C]
-    dark:bg-[#FFFCE1]/5
-    dark:text-[#FFFCE1]">
-              ✦
-            </div>
-
-          </div>
-
-          <div class="flex flex-wrap gap-3">
-
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">Adobe Photoshop</span>
-            <span class="skill-tag">Adobe XD</span>
-
-          </div>
-
-        </div>
       </div>
 
 
-      <!-- ================= SKILL HIGHLIGHT ================= -->
-      <div class="mt-6 rounded-3xl
-                border border-[#124D1C]/10
-                bg-[#124D1C]/5
-                p-6
-                backdrop-blur-xl
-                dark:border-[#FFFCE1]/10
-                dark:bg-[#FFFCE1]/5">
+      <!-- ================= BOTTOM HIGHLIGHT ================= -->
+      <div class="mt-8 rounded-3xl
+             border border-[#124D1C]/10
+             bg-[#124D1C]/5
+             p-6 backdrop-blur-xl
+             dark:border-[#FFFCE1]/10
+             dark:bg-[#FFFCE1]/5">
 
         <div class="flex flex-col gap-5
-                  sm:flex-row sm:items-center
-                  sm:justify-between">
+               sm:flex-row sm:items-center
+               sm:justify-between">
 
           <div>
+
             <p class="text-sm font-semibold
-                    text-[#124D1C]
-                    dark:text-[#FFFCE1]">
+                   text-[#124D1C]
+                   dark:text-[#FFFCE1]">
               Always learning. Always building.
             </p>
 
             <p class="mt-1 text-sm
-                    text-[#124D1C]/55
-                    dark:text-[#DDEFD8]/55">
+                   text-[#124D1C]/55
+                   dark:text-[#DDEFD8]/55">
               Exploring modern AI tools and emerging web technologies.
             </p>
+
           </div>
 
           <div class="flex flex-wrap gap-2">
 
-            <span class="skill-mini-tag">AI Integration</span>
-            <span class="skill-mini-tag">Modern Web</span>
-            <span class="skill-mini-tag">Performance</span>
+            <span class="skill-mini-tag">
+              AI Integration
+            </span>
+
+            <span class="skill-mini-tag">
+              Modern Web
+            </span>
+
+            <span class="skill-mini-tag">
+              Performance
+            </span>
 
           </div>
 
@@ -1815,7 +1779,6 @@ dark:shadow-none">
       </div>
 
     </div>
-
   </section>
 
   <!-- ================= PROJECTS SECTION ================= -->
@@ -2356,7 +2319,7 @@ dark:shadow-none">
                 bg-[#124D1C]/5
                 p-8 text-center
                 dark:border-[#FFFCE1]/10
-                dark:bg-[#FFFCE1]/5" >
+                dark:bg-[#FFFCE1]/5">
 
           <span class="flex h-14 w-14 items-center justify-center
                    rounded-full
@@ -2419,7 +2382,8 @@ dark:shadow-none">
       <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 mb-10">
         <div class="swiper-wrapper">
           <div class="swiper-slide relative ">
-            <div class="casShado overflow-hidden border-[#124D1C] border-[10px] mb-10 rounded-3xl sm:h-[700px] h-[700px] sm:w-[90%]">
+            <div
+              class="casShado overflow-hidden border-[#124D1C] border-[10px] mb-10 rounded-3xl sm:h-[700px] h-[700px] sm:w-[90%]">
               <iframe src="https://www.kedgeimmigration.com/" title="Logistics" class="w-full h-full"></iframe>
             </div>
             <div
@@ -2507,34 +2471,43 @@ dark:shadow-none">
   </section>
 
 
-  <!-- ================= CONTACT SECTION ================= -->
-  <section id="contact" class="relative overflow-hidden bg-[#FFFCE1] py-24 sm:py-28 dark:bg-[#071B0A]">
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact"
+  class="relative overflow-hidden bg-[#FFFCE1] py-24 sm:py-28 dark:bg-[#071B0A]">
 
-    <!-- Background Glow -->
-    <div class="pointer-events-none absolute -left-40 top-20
+  <!-- Background Glow -->
+  <div class="pointer-events-none absolute -left-40 top-20
               h-80 w-80 rounded-full
               bg-[#124D1C]/10 blur-3xl
               dark:bg-[#FFFCE1]/5">
-    </div>
-    <div class="pointer-events-none absolute -right-40 bottom-10
+  </div>
+
+  <div class="pointer-events-none absolute -right-40 bottom-10
               h-96 w-96 rounded-full
               bg-[#124D1C]/10 blur-3xl
               dark:bg-[#FFFCE1]/5">
-    </div>
-    <!-- Grid Background -->
-    <div class="pointer-events-none absolute inset-0 opacity-[0.025]
-              dark:opacity-[0.035]" style="
-    background-image:
-      linear-gradient(#124D1C 1px, transparent 1px),
-      linear-gradient(90deg, #124D1C 1px, transparent 1px);
-    background-size: 50px 50px;
-  ">
-    </div>
+  </div>
 
-    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-      <!-- ================= HEADER ================= -->
-      <div class="mx-auto max-w-2xl text-center">
-        <span class="inline-flex items-center gap-2 rounded-full
+  <!-- Grid Background -->
+  <div class="pointer-events-none absolute inset-0 opacity-[0.025]
+              dark:opacity-[0.035]"
+    style="
+      background-image:
+        linear-gradient(#124D1C 1px, transparent 1px),
+        linear-gradient(90deg, #124D1C 1px, transparent 1px);
+      background-size: 50px 50px;
+    ">
+  </div>
+
+
+  <!-- Main Container -->
+  <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+
+    <!-- ================= HEADER ================= -->
+    <div class="mx-auto max-w-2xl text-center">
+
+      <span class="inline-flex items-center gap-2 rounded-full
                    border border-[#124D1C]/15
                    bg-[#124D1C]/5
                    px-4 py-2
@@ -2545,47 +2518,49 @@ dark:shadow-none">
                    dark:bg-[#FFFCE1]/5
                    dark:text-[#FFFCE1]">
 
-          <span class="h-1.5 w-1.5 rounded-full
+        <span class="h-1.5 w-1.5 rounded-full
                      bg-[#124D1C]
                      dark:bg-[#FFFCE1]">
-          </span>
-
-          Get In Touch
         </span>
 
+        Get In Touch
 
-        <h2 class="mt-5 text-4xl font-bold tracking-tight
+      </span>
+
+
+      <h2 class="mt-5 text-4xl font-bold tracking-tight
                  text-[#124D1C]
                  sm:text-5xl
                  dark:text-[#FFFCE1]">
 
-          Let's build something
-          <span class="text-[#124D1C]/45 dark:text-[#FFFCE1]/45">
-            great together.
-          </span>
+        Let's build something
 
-        </h2>
+        <span class="text-[#124D1C]/45 dark:text-[#FFFCE1]/45">
+          great together.
+        </span>
+
+      </h2>
 
 
-        <p class="mt-5 text-base leading-7
+      <p class="mt-5 text-base leading-7
                 text-[#124D1C]/60
                 sm:text-lg
                 dark:text-[#DDEFD8]/65">
 
-          Have a project in mind, need a frontend developer,
-          or simply want to say hello? I'd love to hear from you.
+        Have a project in mind, need a frontend developer,
+        or simply want to say hello? I'd love to hear from you.
 
-        </p>
+      </p>
 
-      </div>
-
-
-      <!-- ================= CONTACT GRID ================= -->
-      <div class="mt-14 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+    </div>
 
 
-        <!-- ================= LEFT INFO ================= -->
-        <div class="relative overflow-hidden rounded-3xl
+    <!-- ================= CONTACT GRID ================= -->
+    <div class="mt-14 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+
+
+      <!-- ================= LEFT INFO ================= -->
+      <div class="relative overflow-hidden rounded-3xl
                   border border-[#124D1C]/10
                   bg-white/40
                   p-7
@@ -2595,215 +2570,192 @@ dark:shadow-none">
                   dark:bg-[#0D3513]/50
                   dark:shadow-none">
 
-          <!-- Accent -->
-          <div class="absolute left-0 top-0 h-1 w-full
+        <!-- Accent -->
+        <div class="absolute left-0 top-0 h-1 w-full
                     bg-[#124D1C]
-                    dark:bg-[#FFFCE1]"></div>
+                    dark:bg-[#FFFCE1]">
+        </div>
 
 
-          <p class="text-xs uppercase tracking-[0.2em]
+        <p class="text-xs uppercase tracking-[0.2em]
                   text-[#124D1C]/45
                   dark:text-[#DDEFD8]/45">
-            Contact Details
-          </p>
+          Contact Details
+        </p>
 
 
-          <h3 class="mt-3 text-2xl font-bold
+        <h3 class="mt-3 text-2xl font-bold
                    text-[#124D1C]
                    dark:text-[#FFFCE1]">
-            Let's talk.
-          </h3>
+          Let's talk.
+        </h3>
 
 
-          <p class="mt-4 text-sm leading-7
+        <p class="mt-4 text-sm leading-7
                   text-[#124D1C]/60
                   dark:text-[#DDEFD8]/65">
-            I'm always open to discussing new projects, creative ideas
-            or opportunities to be part of something meaningful.
-          </p>
+
+          I'm always open to discussing new projects,
+          creative ideas or opportunities to be part of
+          something meaningful.
+
+        </p>
 
 
-          <!-- Contact Items -->
-          <div class="mt-8 space-y-5">
+        <!-- Contact Items -->
+        <div class="mt-8 space-y-5">
 
 
-            <!-- Email -->
-            <a href="mailto:your-email@example.com" class="group flex items-center gap-4 rounded-2xl
-                    border border-[#124D1C]/10
-                    bg-[#FFFCE1]/50
-                    p-4
-                    transition-all duration-300
-                    hover:-translate-y-1
-                    hover:border-[#124D1C]/20
-                    hover:bg-[#124D1C]/5
-                    dark:border-[#FFFCE1]/10
-                    dark:bg-[#071B0A]/40
-                    dark:hover:bg-[#FFFCE1]/5">
+          <!-- Email -->
+          <a href="mailto:kirtsingh221@gmail.com"
+            class="group flex items-center gap-4 rounded-2xl
+                   border border-[#124D1C]/10
+                   bg-[#FFFCE1]/50
+                   p-4
+                   transition-all duration-300
+                   hover:-translate-y-1
+                   hover:border-[#124D1C]/20
+                   hover:bg-[#124D1C]/5
+                   dark:border-[#FFFCE1]/10
+                   dark:bg-[#071B0A]/40
+                   dark:hover:bg-[#FFFCE1]/5">
 
-              <div class="flex h-11 w-11 shrink-0 items-center justify-center
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center
                         rounded-xl
                         bg-[#124D1C]/10
                         text-[#124D1C]
                         dark:bg-[#FFFCE1]/10
                         dark:text-[#FFFCE1]">
 
-                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M3 6.5A2.5 2.5 0 015.5 4h13A2.5 2.5 0 0121 6.5v11a2.5 2.5 0 01-2.5 2.5h-13A2.5 2.5 0 013 17.5v-11z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m4 6 8 6 8-6" />
-                </svg>
+              <svg class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
 
-              </div>
+                <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M3 6.5A2.5 2.5 0 015.5 4h13A2.5 2.5 0 0121 6.5v11a2.5 2.5 0 01-2.5 2.5h-13A2.5 2.5 0 013 17.5v-11z" />
 
+                <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="m4 6 8 6 8-6" />
 
-              <div class="min-w-0">
-                <p class="text-[10px] uppercase tracking-[0.15em]
-                        text-[#124D1C]/40
-                        dark:text-[#DDEFD8]/40">
-                  Email
-                </p>
-
-                <p class="mt-1 truncate text-sm font-semibold
-                        text-[#124D1C]
-                        dark:text-[#FFFCE1]">
-                  your-email@example.com
-                </p>
-              </div>
-
-            </a>
-
-
-            <!-- Location -->
-            <div class="flex items-center gap-4 rounded-2xl
-                      border border-[#124D1C]/10
-                      bg-[#FFFCE1]/50
-                      p-4
-                      dark:border-[#FFFCE1]/10
-                      dark:bg-[#071B0A]/40">
-
-              <div class="flex h-11 w-11 shrink-0 items-center justify-center
-                        rounded-xl
-                        bg-[#124D1C]/10
-                        text-[#124D1C]
-                        dark:bg-[#FFFCE1]/10
-                        dark:text-[#FFFCE1]">
-
-                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M12 21s7-6.1 7-12a7 7 0 10-14 0c0 5.9 7 12 7 12z" />
-                  <circle cx="12" cy="9" r="2.2" stroke-width="1.8" />
-                </svg>
-
-              </div>
-
-
-              <div>
-                <p class="text-[10px] uppercase tracking-[0.15em]
-                        text-[#124D1C]/40
-                        dark:text-[#DDEFD8]/40">
-                  Location
-                </p>
-
-                <p class="mt-1 text-sm font-semibold
-                        text-[#124D1C]
-                        dark:text-[#FFFCE1]">
-                  India
-                </p>
-              </div>
+              </svg>
 
             </div>
 
 
-            <!-- Availability -->
-            <div class="flex items-center gap-4 rounded-2xl
+            <div class="min-w-0">
+
+              <p class="text-[10px] uppercase tracking-[0.15em]
+                        text-[#124D1C]/40
+                        dark:text-[#DDEFD8]/40">
+                Email
+              </p>
+
+              <p class="mt-1 truncate text-sm font-semibold
+                        text-[#124D1C]
+                        dark:text-[#FFFCE1]">
+                kirtsingh221@gmail.com
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- Location -->
+          <div class="flex items-center gap-4 rounded-2xl
                       border border-[#124D1C]/10
                       bg-[#FFFCE1]/50
                       p-4
                       dark:border-[#FFFCE1]/10
                       dark:bg-[#071B0A]/40">
 
-              <div class="relative flex h-11 w-11 shrink-0
-                        items-center justify-center rounded-xl
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center
+                        rounded-xl
                         bg-[#124D1C]/10
-                        dark:bg-[#FFFCE1]/10">
+                        text-[#124D1C]
+                        dark:bg-[#FFFCE1]/10
+                        dark:text-[#FFFCE1]">
 
-                <span class="absolute h-3 w-3 animate-ping
-                           rounded-full bg-[#124D1C]/50
-                           dark:bg-[#FFFCE1]/50"></span>
+              <svg class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
 
-                <span class="relative h-2.5 w-2.5 rounded-full
-                           bg-[#124D1C]
-                           dark:bg-[#FFFCE1]"></span>
+                <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M12 21s7-6.1 7-12a7 7 0 10-14 0c0 5.9 7 12 7 12z" />
 
-              </div>
+                <circle cx="12" cy="9" r="2.2" stroke-width="1.8" />
+
+              </svg>
+
+            </div>
 
 
-              <div>
-                <p class="text-[10px] uppercase tracking-[0.15em]
+            <div>
+
+              <p class="text-[10px] uppercase tracking-[0.15em]
                         text-[#124D1C]/40
                         dark:text-[#DDEFD8]/40">
-                  Availability
-                </p>
+                Location
+              </p>
 
-                <p class="mt-1 text-sm font-semibold
+              <p class="mt-1 text-sm font-semibold
                         text-[#124D1C]
                         dark:text-[#FFFCE1]">
-                  Available for new projects
-                </p>
-              </div>
+                India
+              </p>
 
             </div>
 
           </div>
 
 
-          <!-- Social -->
-          <div class="mt-8 border-t border-[#124D1C]/10 pt-6
-                    dark:border-[#FFFCE1]/10">
-
-            <p class="text-xs uppercase tracking-[0.2em]
-                    text-[#124D1C]/40
-                    dark:text-[#DDEFD8]/40">
-              Connect with me
-            </p>
-
-
-            <div class="mt-4 flex gap-3">
-
-              <a href="#" aria-label="GitHub" class="flex h-10 w-10 items-center justify-center
-                      rounded-xl
+          <!-- Availability -->
+          <div class="flex items-center gap-4 rounded-2xl
                       border border-[#124D1C]/10
-                      text-xs font-bold
-                      text-[#124D1C]/60
-                      transition-all duration-300
-                      hover:-translate-y-1
-                      hover:border-[#124D1C]/25
-                      hover:bg-[#124D1C]/10
-                      hover:text-[#124D1C]
+                      bg-[#FFFCE1]/50
+                      p-4
                       dark:border-[#FFFCE1]/10
-                      dark:text-[#FFFCE1]/60
-                      dark:hover:bg-[#FFFCE1]/10
-                      dark:hover:text-[#FFFCE1]">
-                GH
-              </a>
+                      dark:bg-[#071B0A]/40">
+
+            <div class="relative flex h-11 w-11 shrink-0
+                        items-center justify-center rounded-xl
+                        bg-[#124D1C]/10
+                        dark:bg-[#FFFCE1]/10">
+
+              <span class="absolute h-3 w-3 animate-ping
+                           rounded-full bg-[#124D1C]/50
+                           dark:bg-[#FFFCE1]/50">
+              </span>
+
+              <span class="relative h-2.5 w-2.5 rounded-full
+                           bg-[#124D1C]
+                           dark:bg-[#FFFCE1]">
+              </span>
+
+            </div>
 
 
-              <a href="#" aria-label="LinkedIn" class="flex h-10 w-10 items-center justify-center
-                      rounded-xl
-                      border border-[#124D1C]/10
-                      text-sm font-bold
-                      text-[#124D1C]/60
-                      transition-all duration-300
-                      hover:-translate-y-1
-                      hover:border-[#124D1C]/25
-                      hover:bg-[#124D1C]/10
-                      hover:text-[#124D1C]
-                      dark:border-[#FFFCE1]/10
-                      dark:text-[#FFFCE1]/60
-                      dark:hover:bg-[#FFFCE1]/10
-                      dark:hover:text-[#FFFCE1]">
-                in
-              </a>
+            <div>
+
+              <p class="text-[10px] uppercase tracking-[0.15em]
+                        text-[#124D1C]/40
+                        dark:text-[#DDEFD8]/40">
+                Availability
+              </p>
+
+              <p class="mt-1 text-sm font-semibold
+                        text-[#124D1C]
+                        dark:text-[#FFFCE1]">
+                Available for new projects
+              </p>
 
             </div>
 
@@ -2812,163 +2764,195 @@ dark:shadow-none">
         </div>
 
 
-        <!-- ================= CONTACT FORM ================= -->
-        <div class="relative overflow-hidden rounded-3xl
+        <!-- Social -->
+        <div class="mt-8 border-t border-[#124D1C]/10 pt-6
+                    dark:border-[#FFFCE1]/10">
+
+          <p class="text-xs uppercase tracking-[0.2em]
+                    text-[#124D1C]/40
+                    dark:text-[#DDEFD8]/40">
+            Connect with me
+          </p>
+
+
+          <div class="mt-4 flex gap-3">
+
+            <a href="https://github.com/kirtsingh221"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex h-10 w-10 items-center justify-center
+                     rounded-xl
+                     border border-[#124D1C]/10
+                     text-xs font-bold
+                     text-[#124D1C]/60
+                     transition-all duration-300
+                     hover:-translate-y-1
+                     hover:border-[#124D1C]/25
+                     hover:bg-[#124D1C]/10
+                     hover:text-[#124D1C]
+                     dark:border-[#FFFCE1]/10
+                     dark:text-[#FFFCE1]/60
+                     dark:hover:bg-[#FFFCE1]/10
+                     dark:hover:text-[#FFFCE1]">
+              GH
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/gurkirat-singh-a863971b5/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex h-10 w-10 items-center justify-center
+                     rounded-xl
+                     border border-[#124D1C]/10
+                     text-sm font-bold
+                     text-[#124D1C]/60
+                     transition-all duration-300
+                     hover:-translate-y-1
+                     hover:border-[#124D1C]/25
+                     hover:bg-[#124D1C]/10
+                     hover:text-[#124D1C]
+                     dark:border-[#FFFCE1]/10
+                     dark:text-[#FFFCE1]/60
+                     dark:hover:bg-[#FFFCE1]/10
+                     dark:hover:text-[#FFFCE1]">
+              in
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= RIGHT CTA ================= -->
+      <div class="relative overflow-hidden rounded-3xl
                   border border-[#124D1C]/10
                   bg-white/40
-                  p-7
+                  p-7 sm:p-9
                   shadow-[0_15px_50px_rgba(18,77,28,0.06)]
                   backdrop-blur-xl
                   dark:border-[#FFFCE1]/10
                   dark:bg-[#0D3513]/50
                   dark:shadow-none">
 
-          <div class="absolute left-0 top-0 h-1 w-full
+        <!-- Accent -->
+        <div class="absolute left-0 top-0 h-1 w-full
                     bg-[#124D1C]
-                    dark:bg-[#FFFCE1]"></div>
+                    dark:bg-[#FFFCE1]">
+        </div>
 
 
-          <div class="mb-7">
+        <!-- Glow -->
+        <div class="pointer-events-none absolute -right-24 -top-24
+                    h-56 w-56 rounded-full
+                    bg-[#124D1C]/10 blur-3xl
+                    dark:bg-[#FFFCE1]/5">
+        </div>
+
+
+        <div class="relative z-10">
+
+          <!-- Label -->
+          <div class="flex items-center gap-2">
+
+            <span class="h-2 w-2 rounded-full
+                         bg-[#124D1C]
+                         dark:bg-[#FFFCE1]
+                         animate-pulse">
+            </span>
+
             <p class="text-xs uppercase tracking-[0.2em]
-                    text-[#124D1C]/45
-                    dark:text-[#DDEFD8]/45">
-              Send a message
+                      text-[#124D1C]/45
+                      dark:text-[#DDEFD8]/45">
+              Let's Connect
             </p>
 
-            <h3 class="mt-2 text-2xl font-bold
-                     text-[#124D1C]
-                     dark:text-[#FFFCE1]">
-              Tell me about your project.
-            </h3>
           </div>
 
 
-          <form id="contactForm" class="space-y-5">
+          <!-- Heading -->
+          <h3 class="mt-4 text-3xl font-bold tracking-tight
+                     text-[#124D1C]
+                     sm:text-4xl
+                     dark:text-[#FFFCE1]">
+
+            Have a project
+
+            <span class="text-[#124D1C]/45
+                         dark:text-[#FFFCE1]/45">
+              in mind?
+            </span>
+
+          </h3>
 
 
-            <!-- Name + Email -->
-            <div class="grid gap-5 sm:grid-cols-2">
+          <!-- Description -->
+          <p class="mt-5 max-w-lg text-sm leading-7
+                    text-[#124D1C]/60
+                    sm:text-base
+                    dark:text-[#DDEFD8]/65">
 
-              <div>
-                <label for="name" class="mb-2 block text-xs font-semibold
-                            text-[#124D1C]
-                            dark:text-[#FFFCE1]">
-                  Your Name
-                </label>
+            Whether you have a new idea, need help with an existing
+            project, or want to explore a collaboration, feel free
+            to reach out.
 
-                <input id="name" name="name" type="text" placeholder="John Doe" required class="w-full rounded-xl
-                       border border-[#124D1C]/10
-                       bg-[#FFFCE1]/60
-                       px-4 py-3.5
-                       text-sm text-[#124D1C]
-                       outline-none
-                       placeholder:text-[#124D1C]/30
-                       transition-all duration-300
-                       focus:border-[#124D1C]/40
-                       focus:ring-4
-                       focus:ring-[#124D1C]/10
-                       dark:border-[#FFFCE1]/10
-                       dark:bg-[#071B0A]/50
-                       dark:text-[#FFFCE1]
-                       dark:placeholder:text-[#DDEFD8]/30
-                       dark:focus:border-[#FFFCE1]/30
-                       dark:focus:ring-[#FFFCE1]/10" />
-              </div>
+          </p>
 
 
-              <div>
-                <label for="email" class="mb-2 block text-xs font-semibold
-                            text-[#124D1C]
-                            dark:text-[#FFFCE1]">
-                  Email Address
-                </label>
+          <!-- Availability -->
+          <div class="mt-8 flex items-center gap-4 rounded-2xl
+                      border border-[#124D1C]/10
+                      bg-[#FFFCE1]/60
+                      p-4
+                      dark:border-[#FFFCE1]/10
+                      dark:bg-[#071B0A]/50">
 
-                <input id="email" name="email" type="email" placeholder="john@example.com" required class="w-full rounded-xl
-                       border border-[#124D1C]/10
-                       bg-[#FFFCE1]/60
-                       px-4 py-3.5
-                       text-sm text-[#124D1C]
-                       outline-none
-                       placeholder:text-[#124D1C]/30
-                       transition-all duration-300
-                       focus:border-[#124D1C]/40
-                       focus:ring-4
-                       focus:ring-[#124D1C]/10
-                       dark:border-[#FFFCE1]/10
-                       dark:bg-[#071B0A]/50
-                       dark:text-[#FFFCE1]
-                       dark:placeholder:text-[#DDEFD8]/30
-                       dark:focus:border-[#FFFCE1]/30
-                       dark:focus:ring-[#FFFCE1]/10" />
-              </div>
+            <div class="relative flex h-12 w-12 shrink-0
+                        items-center justify-center rounded-xl
+                        bg-[#124D1C]/10
+                        dark:bg-[#FFFCE1]/10">
+
+              <span class="absolute h-3 w-3 animate-ping
+                           rounded-full
+                           bg-[#124D1C]/40
+                           dark:bg-[#FFFCE1]/40">
+              </span>
+
+              <span class="relative h-2.5 w-2.5 rounded-full
+                           bg-[#124D1C]
+                           dark:bg-[#FFFCE1]">
+              </span>
 
             </div>
 
 
-            <!-- Subject -->
             <div>
-              <label for="subject" class="mb-2 block text-xs font-semibold
-                          text-[#124D1C]
-                          dark:text-[#FFFCE1]">
-                Subject
-              </label>
 
-              <input id="subject" name="subject" type="text" placeholder="Let's work together" required class="w-full rounded-xl
-                     border border-[#124D1C]/10
-                     bg-[#FFFCE1]/60
-                     px-4 py-3.5
-                     text-sm text-[#124D1C]
-                     outline-none
-                     placeholder:text-[#124D1C]/30
-                     transition-all duration-300
-                     focus:border-[#124D1C]/40
-                     focus:ring-4
-                     focus:ring-[#124D1C]/10
-                     dark:border-[#FFFCE1]/10
-                     dark:bg-[#071B0A]/50
-                     dark:text-[#FFFCE1]
-                     dark:placeholder:text-[#DDEFD8]/30
-                     dark:focus:border-[#FFFCE1]/30
-                     dark:focus:ring-[#FFFCE1]/10" />
+              <p class="text-[10px] font-semibold uppercase
+                        tracking-[0.15em]
+                        text-[#124D1C]/40
+                        dark:text-[#DDEFD8]/40">
+                Currently
+              </p>
+
+              <p class="mt-1 text-sm font-semibold
+                        text-[#124D1C]
+                        dark:text-[#FFFCE1]">
+                Available for new projects
+              </p>
+
             </div>
 
-
-            <!-- Message -->
-            <div>
-              <label for="message" class="mb-2 block text-xs font-semibold
-                          text-[#124D1C]
-                          dark:text-[#FFFCE1]">
-                Message
-              </label>
-
-              <textarea id="message" name="message" rows="6" placeholder="Tell me a little about your project..."
-                required class="w-full resize-none rounded-xl
-                     border border-[#124D1C]/10
-                     bg-[#FFFCE1]/60
-                     px-4 py-3.5
-                     text-sm text-[#124D1C]
-                     outline-none
-                     placeholder:text-[#124D1C]/30
-                     transition-all duration-300
-                     focus:border-[#124D1C]/40
-                     focus:ring-4
-                     focus:ring-[#124D1C]/10
-                     dark:border-[#FFFCE1]/10
-                     dark:bg-[#071B0A]/50
-                     dark:text-[#FFFCE1]
-                     dark:placeholder:text-[#DDEFD8]/30
-                     dark:focus:border-[#FFFCE1]/30
-                     dark:focus:ring-[#FFFCE1]/10">
-            </textarea>
-            </div>
+          </div>
 
 
-            <!-- Submit -->
-            <button type="submit" class="group inline-flex w-full items-center
-                   justify-center gap-2 rounded-xl
+          <!-- Email CTA -->
+          <a href="mailto:kirtsingh221@gmail.com?subject=Project%20Inquiry"
+            class="group mt-6 flex w-full items-center justify-between
+                   rounded-2xl
                    bg-[#124D1C]
-                   px-6 py-3.5
-                   text-sm font-semibold
+                   px-5 py-4
                    text-[#FFFCE1]
                    shadow-xl
                    shadow-[#124D1C]/20
@@ -2977,23 +2961,152 @@ dark:shadow-none">
                    hover:bg-[#1A6B27]
                    hover:shadow-2xl">
 
-              Send Message
+            <div class="flex items-center gap-3">
 
-              <svg class="h-4 w-4 transition-transform duration-300
-                     group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6-6 6 6-6 6" />
-              </svg>
+              <div class="flex h-10 w-10 items-center justify-center
+                          rounded-xl
+                          bg-[#FFFCE1]/10">
 
-            </button>
+                <svg class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+
+                  <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M3 6.5A2.5 2.5 0 015.5 4h13A2.5 2.5 0 0121 6.5v11a2.5 2.5 0 01-2.5 2.5h-13A2.5 2.5 0 013 17.5v-11z" />
+
+                  <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="m4 6 8 6 8-6" />
+
+                </svg>
+
+              </div>
 
 
-            <p class="text-center text-[11px]
-                    text-[#124D1C]/40
-                    dark:text-[#DDEFD8]/40">
-              I'll get back to you as soon as possible.
+              <div>
+
+                <p class="text-[10px] uppercase
+                          tracking-[0.15em] text-[#FFFCE1]/50">
+                  Email Me
+                </p>
+
+                <p class="mt-0.5 text-sm font-semibold">
+                  Let's start a conversation
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <svg class="h-5 w-5 transition-transform duration-300
+                        group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+
+              <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-6-6 6 6-6 6" />
+
+            </svg>
+
+          </a>
+
+
+          <!-- Social Buttons -->
+          <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+            <a href="https://github.com/kirtsingh221"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center justify-center gap-2
+                     rounded-xl
+                     border border-[#124D1C]/10
+                     bg-[#FFFCE1]/50
+                     px-4 py-3
+                     text-xs font-semibold
+                     text-[#124D1C]/70
+                     transition-all duration-300
+                     hover:-translate-y-1
+                     hover:border-[#124D1C]/20
+                     hover:bg-[#124D1C]/5
+                     hover:text-[#124D1C]
+                     dark:border-[#FFFCE1]/10
+                     dark:bg-[#071B0A]/40
+                     dark:text-[#FFFCE1]/70
+                     dark:hover:bg-[#FFFCE1]/5
+                     dark:hover:text-[#FFFCE1]">
+
+              <span class="text-sm font-bold">GH</span>
+              GitHub
+
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/gurkirat-singh-a863971b5/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center justify-center gap-2
+                     rounded-xl
+                     border border-[#124D1C]/10
+                     bg-[#FFFCE1]/50
+                     px-4 py-3
+                     text-xs font-semibold
+                     text-[#124D1C]/70
+                     transition-all duration-300
+                     hover:-translate-y-1
+                     hover:border-[#124D1C]/20
+                     hover:bg-[#124D1C]/5
+                     hover:text-[#124D1C]
+                     dark:border-[#FFFCE1]/10
+                     dark:bg-[#071B0A]/40
+                     dark:text-[#FFFCE1]/70
+                     dark:hover:bg-[#FFFCE1]/5
+                     dark:hover:text-[#FFFCE1]">
+
+              <span class="text-sm font-bold">in</span>
+              LinkedIn
+
+            </a>
+
+          </div>
+
+
+          <!-- Bottom Note -->
+          <div class="mt-7 flex items-center gap-3
+                      border-t border-[#124D1C]/10
+                      pt-5
+                      dark:border-[#FFFCE1]/10">
+
+            <svg class="h-4 w-4 shrink-0
+                        text-[#124D1C]/40
+                        dark:text-[#DDEFD8]/40"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+
+              <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M12 8v4l2.5 2.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+
+            </svg>
+
+            <p class="text-[11px] leading-5
+                      text-[#124D1C]/40
+                      dark:text-[#DDEFD8]/40">
+
+              Usually replies within 24–48 hours.
+
             </p>
 
-          </form>
+          </div>
 
         </div>
 
@@ -3001,7 +3114,9 @@ dark:shadow-none">
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
   <!-- ================= FLOATING RIGHT NAV ================= -->
   <nav id="sideNav" class="fixed z-50
@@ -3262,6 +3377,330 @@ dark:shadow-none">
 
   </a>
 
+  <!-- ========================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================= -->
+
+  <footer class="relative overflow-hidden border-t
+       border-[#124D1C]/10
+       bg-[#FFFCE1]
+       dark:border-[#FFFCE1]/10
+       dark:bg-[#071B0A]">
+
+    <!-- Background Glow -->
+    <div class="pointer-events-none absolute -left-40 -bottom-40
+         h-96 w-96 rounded-full
+         bg-[#124D1C]/10 blur-3xl
+         dark:bg-[#FFFCE1]/5"></div>
+
+    <div class="pointer-events-none absolute -right-40 -top-40
+         h-96 w-96 rounded-full
+         bg-[#124D1C]/10 blur-3xl
+         dark:bg-[#FFFCE1]/5"></div>
+
+    <!-- Subtle Grid -->
+    <div class="pointer-events-none absolute inset-0 opacity-[0.025]
+         dark:opacity-[0.035]" style="
+    background-image:
+      linear-gradient(#124D1C 1px, transparent 1px),
+      linear-gradient(90deg, #124D1C 1px, transparent 1px);
+    background-size: 45px 45px;
+  "></div>
+
+
+    <!-- Container -->
+    <div class="relative z-10 mx-auto max-w-7xl
+         px-5 py-14 sm:px-6 lg:px-8">
+
+      <!-- ================= TOP FOOTER ================= -->
+
+      <div class="grid gap-10
+           md:grid-cols-2
+           lg:grid-cols-4">
+
+        <!-- ================= BRAND ================= -->
+
+        <div class="lg:col-span-2">
+
+          <!-- Logo -->
+          <a href="#home" class="group inline-flex items-center gap-3">
+
+            <span class="flex h-11 w-11 items-center justify-center
+                 rounded-xl
+                 bg-[#124D1C]
+                 text-lg font-bold
+                 text-[#FFFCE1]
+                 shadow-lg
+                 transition-all duration-300
+                 group-hover:rotate-6
+                 group-hover:scale-110
+                 dark:bg-[#FFFCE1]
+                 dark:text-[#071B0A]">
+              G
+            </span>
+
+            <span class="text-xl font-bold
+                 text-[#124D1C]
+                 dark:text-[#FFFCE1]">
+              Gurkirat<span class="opacity-40">.</span>
+            </span>
+
+          </a>
+
+
+          <!-- Description -->
+          <p class="mt-5 max-w-md
+               text-sm leading-7
+               text-[#124D1C]/60
+               dark:text-[#DDEFD8]/60">
+            Frontend Developer with 4+ years of experience,
+            focused on building modern, responsive and
+            high-performance web experiences.
+          </p>
+
+
+          <!-- Status -->
+          <div class="mt-6 inline-flex items-center gap-2
+               rounded-full
+               border border-[#124D1C]/10
+               bg-[#124D1C]/5
+               px-3 py-2
+               text-xs font-semibold
+               text-[#124D1C]
+               dark:border-[#FFFCE1]/10
+               dark:bg-[#FFFCE1]/5
+               dark:text-[#FFFCE1]">
+
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full
+                   animate-ping rounded-full
+                   bg-current opacity-50"></span>
+
+              <span class="relative inline-flex h-2 w-2
+                   rounded-full bg-current"></span>
+            </span>
+
+            Available for new opportunities
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= CONNECT ================= -->
+
+        <div>
+
+          <h3 class="text-sm font-bold uppercase
+               tracking-[0.15em]
+               text-[#124D1C]
+               dark:text-[#FFFCE1]">
+            Connect
+          </h3>
+
+
+          <!-- Social Links -->
+          <div class="mt-5 flex flex-wrap gap-3">
+
+            <!-- GitHub -->
+            <a href="https://github.com/kirtsingh221" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+              class="social-link">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08
+              3.29 9.39 7.86 10.91.58.11.79-.25.79-.56
+              0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54
+              -3.88-1.54-.53-1.34-1.28-1.69-1.28-1.69
+              -1.05-.72.08-.71.08-.71 1.16.08
+              1.77 1.19 1.77 1.19 1.03 1.76 2.69
+              1.25 3.35.96.1-.75.4-1.25.73-1.54
+              -2.56-.29-5.26-1.28-5.26-5.69
+              0-1.26.45-2.29 1.19-3.1
+              -.12-.29-.52-1.47.11-3.07
+              0 0 .97-.31 3.18 1.18
+              .92-.26 1.9-.39 2.88-.39
+              .98 0 1.96.13 2.88.39
+              2.21-1.5 3.18-1.18 3.18-1.18
+              .63 1.6.23 2.78.11 3.07
+              .74.81 1.19 1.84 1.19 3.1
+              0 4.42-2.7 5.4-5.27 5.69
+              .41.36.78 1.07.78 2.16
+              0 1.56-.01 2.81-.01 3.19
+              0 .31.21.67.8.56
+              A11.51 11.51 0 0 0 23.5 12
+              C23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/gurkirat-singh-a863971b5/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" class="social-link">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.45 20.45h-3.56v-5.58
+              c0-1.33-.03-3.04-1.85-3.04
+              -1.85 0-2.13 1.45-2.13 2.94v5.68
+              H9.35V8.99h3.42v1.56h.05
+              c.48-.9 1.64-1.85 3.37-1.85
+              3.6 0 4.26 2.37 4.26 5.46v6.29ZM5.34
+              7.43a2.07 2.07 0 1 1 0-4.14
+              2.07 2.07 0 0 1 0 4.14ZM3.56
+              8.99h3.56v11.46H3.56V8.99ZM22.23
+              0H1.77C.79 0 0 .77 0 1.72v20.56
+              C0 23.23.79 24 1.77 24h20.46
+              c.98 0 1.77-.77 1.77-1.72V1.72
+              C24 .77 23.21 0 22.23 0Z" />
+              </svg>
+            </a>
+
+
+            <!-- Email -->
+            <a href="mailto:kirtsingh221@gmail.com" aria-label="Email" class="social-link">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 6.75A2.25 2.25 0 0 1 5.25 4.5h13.5A2.25
+              2.25 0 0 1 21 6.75v10.5a2.25 2.25 0 0 1-2.25
+              2.25H5.25A2.25 2.25 0 0 1 3 17.25V6.75Z" />
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 6 8.25 6 8.25-6" />
+              </svg>
+            </a>
+
+          </div>
+
+
+          <!-- Contact -->
+          <a href="mailto:kirtsingh221@gmail.com" class="mt-5 inline-flex items-center gap-2
+               text-sm font-semibold
+               text-[#124D1C]
+               transition-all duration-300
+               hover:gap-3
+               dark:text-[#FFFCE1]">
+            Let's work together
+
+            <span>→</span>
+          </a>
+
+        </div>
+
+        <div>
+
+          <h3 class="text-sm font-bold uppercase
+                   tracking-[0.15em]
+                   text-[#124D1C]
+                   dark:text-[#FFFCE1]">
+            Resume
+          </h3>
+
+          <div class="mt-5 flex flex-col gap-3">
+
+            <!-- Download CV -->
+            <a href="/Gurkirat-Singh-CV.pdf" download class="group inline-flex items-center justify-center
+                     gap-3 rounded-full
+                     bg-[#124D1C]
+                     px-5 py-3
+                     text-sm font-semibold
+                     text-[#FFFCE1]
+                     shadow-lg
+                     transition-all duration-300
+                     hover:-translate-y-1
+                     hover:shadow-xl
+                     dark:bg-[#FFFCE1]
+                     dark:text-[#071B0A]">
+
+              <!-- Download Icon -->
+              <svg class="h-4 w-4 transition-transform duration-300
+                       group-hover:translate-y-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4-4m-4 4-4-4
+                     M5 21h14" />
+              </svg>
+
+              Download CV
+
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ================= DIVIDER ================= -->
+
+      <div class="my-10 h-px w-full
+           bg-[#124D1C]/10
+           dark:bg-[#FFFCE1]/10"></div>
+
+
+      <!-- ================= BOTTOM ================= -->
+
+      <div class="flex flex-col gap-4
+           sm:flex-row
+           sm:items-center
+           sm:justify-between">
+
+        <!-- Copyright -->
+        <p class="text-xs
+             text-[#124D1C]/50
+             dark:text-[#DDEFD8]/50">
+          © <span id="footerYear"></span>
+          Gurkirat. All rights reserved.
+        </p>
+
+
+        <!-- Built With -->
+        <div class="flex items-center gap-2
+             text-xs
+             text-[#124D1C]/50
+             dark:text-[#DDEFD8]/50">
+
+          <span>Built with</span>
+
+          <span class="font-semibold
+               text-[#124D1C]
+               dark:text-[#FFFCE1]">
+            React
+          </span>
+
+          <span>+</span>
+
+          <span class="font-semibold
+               text-[#124D1C]
+               dark:text-[#FFFCE1]">
+            Next.js
+          </span>
+
+          <span>♥</span>
+
+        </div>
+
+
+        <!-- Back To Top -->
+        <a href="#home" class="group inline-flex items-center gap-2
+             text-xs font-semibold
+             text-[#124D1C]
+             transition-all duration-300
+             hover:-translate-y-1
+             dark:text-[#FFFCE1]">
+
+          Back to top
+
+          <span class="flex h-7 w-7 items-center justify-center
+               rounded-full
+               border border-[#124D1C]/10
+               transition-all duration-300
+               group-hover:-translate-y-1
+               dark:border-[#FFFCE1]/10">
+            ↑
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+  </footer>
+
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
@@ -3282,7 +3721,7 @@ dark:shadow-none">
         },
       },
     });
-    
+
     var swiper2 = new Swiper('.mySwiper2', {
       spaceBetween: 10,
       navigation: {
@@ -3293,8 +3732,15 @@ dark:shadow-none">
         swiper: swiper,
       },
     });
+
+
+
+    document.getElementById("footerYear").textContent =
+      new Date().getFullYear();
+
   </script>
   <script type="module" src="./src/main.js"></script>
+
 
 </body>
 

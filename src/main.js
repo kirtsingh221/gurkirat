@@ -271,3 +271,81 @@ window.addEventListener(
 // ================= INITIAL LOAD =================
 
 updateNavigation();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const tabs = document.querySelectorAll(".skill-tab");
+  const cards = document.querySelectorAll(".skill-card");
+
+  function showSkills(category) {
+
+    cards.forEach((card, index) => {
+
+      const cardCategory = card.dataset.category;
+
+      const shouldShow =
+        category === "all" ||
+        cardCategory === category;
+
+      if (shouldShow) {
+
+        card.style.display = "";
+
+        /*
+         * Restart animation every time
+         * tab changes
+         */
+        card.style.animation = "none";
+
+        requestAnimationFrame(() => {
+
+          requestAnimationFrame(() => {
+
+            card.style.animation =
+              `skillCardIn 0.55s cubic-bezier(.2,.8,.2,1) ${
+                index * 70
+              }ms both`;
+
+          });
+
+        });
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+
+  tabs.forEach((tab) => {
+
+    tab.addEventListener("click", () => {
+
+      const category = tab.dataset.filter;
+
+      /* Remove active */
+      tabs.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      /* Add active */
+      tab.classList.add("active");
+
+      /* Filter cards */
+      showSkills(category);
+
+    });
+
+  });
+
+
+  /* Initial */
+  showSkills("all");
+
+});
+

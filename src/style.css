@@ -286,3 +286,287 @@ html.dark .skill-mini-tag {
 ::view-transition-old(root) {
   z-index: 1;
 }
+
+  /* ================= TAB ================= */
+
+  .skill-tab {
+    position: relative;
+    border-radius: 50px;
+    padding: 9px 17px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(18, 77, 28, 0.55);
+    cursor: pointer;
+    transition:
+      color 0.3s ease,
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .dark .skill-tab {
+    color: rgba(255, 252, 225, 0.55);
+  }
+
+  .skill-tab:hover {
+    color: #124D1C;
+    transform: translateY(-1px);
+  }
+
+  .dark .skill-tab:hover {
+    color: #FFFCE1;
+  }
+
+  .skill-tab.active {
+    background: #124D1C;
+    color: #FFFCE1;
+    box-shadow: 0 8px 25px rgba(18, 77, 28, 0.18);
+  }
+
+  .dark .skill-tab.active {
+    background: #FFFCE1;
+    color: #071B0A;
+    box-shadow: 0 8px 25px rgba(255, 252, 225, 0.08);
+  }
+
+
+  /* ================= CARD ================= */
+
+  .skill-card {
+    border-radius: 24px;
+    border: 1px solid rgba(18, 77, 28, 0.10);
+    background: rgba(255, 255, 255, 0.40);
+    padding: 24px;
+
+    box-shadow:
+      0 15px 50px rgba(18, 77, 28, 0.06);
+
+    backdrop-filter: blur(20px);
+
+    transition:
+      transform 0.4s cubic-bezier(.2,.8,.2,1),
+      border-color 0.3s ease,
+      box-shadow 0.4s ease;
+
+    animation: skillCardIn 0.55s ease both;
+  }
+
+  .dark .skill-card {
+    border-color: rgba(255, 252, 225, 0.10);
+    background: rgba(13, 53, 19, 0.50);
+    box-shadow: none;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(18, 77, 28, 0.22);
+
+    box-shadow:
+      0 25px 70px rgba(18, 77, 28, 0.12);
+  }
+
+  .dark .skill-card:hover {
+    border-color: rgba(255, 252, 225, 0.18);
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.20);
+  }
+
+
+  /* ================= CARD ANIMATION ================= */
+
+  @keyframes skillCardIn {
+
+    0% {
+      opacity: 0;
+      transform: translateY(25px) scale(0.97);
+      filter: blur(5px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+  }
+
+
+  /* ================= NUMBER ================= */
+
+  .skill-number {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(18, 77, 28, 0.45);
+  }
+
+  .dark .skill-number {
+    color: rgba(221, 239, 216, 0.45);
+  }
+
+
+  /* ================= TITLE ================= */
+
+  .skill-title {
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #124D1C;
+  }
+
+  .dark .skill-title {
+    color: #FFFCE1;
+  }
+
+
+  /* ================= DESCRIPTION ================= */
+
+  .skill-description {
+    margin-top: 7px;
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(18, 77, 28, 0.50);
+  }
+
+  .dark .skill-description {
+    color: rgba(221, 239, 216, 0.55);
+  }
+
+
+  /* ================= ICON ================= */
+
+  .skill-icon {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: rgba(18, 77, 28, 0.05);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #124D1C;
+
+    transition:
+      transform 0.4s ease,
+      background 0.3s ease;
+  }
+
+  .dark .skill-icon {
+    background: rgba(255, 252, 225, 0.05);
+    color: #FFFCE1;
+  }
+
+  .skill-card:hover .skill-icon {
+    transform: rotate(-8deg) scale(1.1);
+  }
+
+
+  /* ================= SKILL TAG ================= */
+
+  .skill-tag {
+    display: inline-flex;
+    align-items: center;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(18, 77, 28, 0.10);
+
+    background: rgba(18, 77, 28, 0.035);
+
+    padding: 8px 13px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: rgba(18, 77, 28, 0.75);
+
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .dark .skill-tag {
+    border-color: rgba(255, 252, 225, 0.10);
+    background: rgba(255, 252, 225, 0.04);
+    color: rgba(255, 252, 225, 0.75);
+  }
+
+  .skill-tag:hover {
+    transform: translateY(-3px);
+
+    background: rgba(18, 77, 28, 0.09);
+
+    border-color: rgba(18, 77, 28, 0.20);
+  }
+
+  .dark .skill-tag:hover {
+    background: rgba(255, 252, 225, 0.08);
+    border-color: rgba(255, 252, 225, 0.18);
+  }
+
+
+  /* ================= MINI TAG ================= */
+
+  .skill-mini-tag {
+    display: inline-flex;
+    border-radius: 999px;
+
+    background: rgba(18, 77, 28, 0.07);
+
+    padding: 7px 11px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: rgba(18, 77, 28, 0.70);
+
+    transition: transform 0.25s ease;
+  }
+
+  .skill-mini-tag:hover {
+    transform: translateY(-2px);
+  }
+
+  .dark .skill-mini-tag {
+    background: rgba(255, 252, 225, 0.06);
+    color: rgba(255, 252, 225, 0.70);
+  }
+
+
+  /* ================= MOBILE ================= */
+
+  @media (max-width: 640px) {
+
+    .skill-tab {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    .skill-card {
+      padding: 20px;
+    }
+
+    .skill-title {
+      font-size: 18px;
+    }
+
+    .skill-description {
+      font-size: 12px;
+    }
+
+    .skill-icon {
+      height: 40px;
+      width: 40px;
+    }
+
+  }
+  
+  
