@@ -91,7 +91,7 @@ async function toggleTheme() {
       },
     ],
     {
-      duration: 1500,
+      duration: 1200,
       easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
       pseudoElement: "::view-transition-new(root)",
       fill: "both",
