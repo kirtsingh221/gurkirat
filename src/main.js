@@ -1,56 +1,111 @@
-// ================= THEME =================
-
 const themeToggle = document.getElementById("themeToggle");
 const moonIcon = document.getElementById("moonIcon");
 const sunIcon = document.getElementById("sunIcon");
+
+
+// ================= THEME =================
 
 function applyTheme(theme) {
   const html = document.documentElement;
 
   if (theme === "dark") {
     html.classList.add("dark");
-  } else {
-    html.classList.remove("dark");
-  }
 
-  // Icons
-  if (theme === "dark") {
     moonIcon?.classList.remove("hidden");
     sunIcon?.classList.add("hidden");
   } else {
+    html.classList.remove("dark");
+
     moonIcon?.classList.add("hidden");
     sunIcon?.classList.remove("hidden");
   }
 }
 
 
-// IMPORTANT:
-// First visit = LIGHT
+// ================= INITIAL THEME =================
 
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "dark" || savedTheme === "light") {
-  applyTheme(savedTheme);
-} else {
-  applyTheme("light");
+applyTheme(
+  savedTheme === "dark"
+    ? "dark"
+    : "light"
+);
+
+
+// ================= THEME ANIMATION =================
+
+async function toggleTheme() {
+
+  const html = document.documentElement;
+
+  const currentTheme = html.classList.contains("dark")
+    ? "dark"
+    : "light";
+
+  const newTheme =
+    currentTheme === "dark"
+      ? "light"
+      : "dark";
+
+
+  // Browser View Transition support
+  if (!document.startViewTransition) {
+    applyTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    return;
+  }
+
+
+  const transition = document.startViewTransition(() => {
+    applyTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+
+
+  await transition.ready;
+
+
+  // Click position
+  const rect = themeToggle.getBoundingClientRect();
+
+  const x = rect.left + rect.width / 10;
+  const y = rect.top + rect.height / 10;
+
+
+  // Maximum radius needed
+  const maxRadius = Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y)
+  );
+
+
+  // Circular reveal
+  document.documentElement.animate(
+    [
+      {
+        clipPath: `circle(0% at ${x}px ${y}px)`,
+      },
+      {
+        clipPath: `circle(150% at ${x}px ${y}px)`,
+      },
+    ],
+    {
+      duration: 1500,
+      easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+      pseudoElement: "::view-transition-new(root)",
+      fill: "both",
+    }
+  );
 }
 
 
-// Toggle Theme
+// ================= CLICK =================
 
-themeToggle?.addEventListener("click", () => {
-  const isDark = document.documentElement.classList.contains("dark");
-
-  const newTheme = isDark ? "light" : "dark";
-
-  applyTheme(newTheme);
-
-  localStorage.setItem("theme", newTheme);
-
-  // Update side nav immediately
-  updateSideNav();
-});
-
+themeToggle?.addEventListener(
+  "click",
+  toggleTheme
+);
 
 // ================= MOBILE MENU =================
 
