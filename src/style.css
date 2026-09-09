@@ -574,4 +574,268 @@ html.dark .skill-mini-tag {
 
   }
   
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-left {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-right {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  
+  @keyframes glow-move {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  
+    50% {
+      transform: translate(30px, -20px) scale(1.1);
+    }
+  }
+  
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 0.4;
+    }
+  
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out both;
+  }
+  
+  .animate-fade-left {
+    animation: fade-left 0.9s ease-out both;
+  }
+  
+  .animate-fade-right {
+    animation: fade-right 0.9s ease-out both;
+  }
+  
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  .animate-glow-move {
+    animation: glow-move 8s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-left {
+    from {
+      opacity: 0;
+      transform: translateX(-45px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-right {
+    from {
+      opacity: 0;
+      transform: translateX(45px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes glow-move {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  
+    50% {
+      transform: translate3d(30px, -20px, 0) scale(1.08);
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  
+  .animate-fade-left {
+    animation: fade-left 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  
+  .animate-fade-right {
+    animation: fade-right 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  
+  .animate-glow-move {
+    animation: glow-move 8s ease-in-out infinite;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  
+  /* =============================== */
+  /* TECH STACK MINI TAGS */
+  /* =============================== */
+  
+  .skill-mini-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(18, 77, 28, 0.1);
+    background: rgba(18, 77, 28, 0.05);
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(18, 77, 28, 0.7);
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+  
+  .skill-mini-tag:hover {
+    transform: translateY(-2px);
+    border-color: rgba(18, 77, 28, 0.25);
+    background: rgba(18, 77, 28, 0.1);
+  }
+  
+  .dark .skill-mini-tag {
+    border-color: rgba(255, 252, 225, 0.1);
+    background: rgba(255, 252, 225, 0.05);
+    color: rgba(221, 239, 216, 0.7);
+  }
+  
+  .dark .skill-mini-tag:hover {
+    border-color: rgba(255, 252, 225, 0.2);
+    background: rgba(255, 252, 225, 0.1);
+  }
+  
+  
+  /* =============================== */
+  /* REDUCED MOTION */
+  /* =============================== */
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
   
